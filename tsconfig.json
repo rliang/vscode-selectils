@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "rootDir": "src",
+    "outDir": "out",
+    "sourceMap": true
+  },
+  "exclude": ["node_modules", ".vscode-test"]
+}

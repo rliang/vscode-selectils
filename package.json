@@ -1,0 +1,129 @@
+{
+  "name": "selectils",
+  "displayName": "Selectils",
+  "description": "Selection utilities",
+  "author": {
+    "name": "Ricardo Liang",
+    "email": "ricardoliang@gmail.com"
+  },
+  "publisher": "rliang",
+  "repository": {
+    "url": "https://github.com/rliang/vscode-selectils"
+  },
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.selectils.select",
+    "onCommand:extension.selectils.split",
+    "onCommand:extension.selectils.filter",
+    "onCommand:extension.selectils.replace",
+    "onCommand:extension.selectils.merge",
+    "onCommand:extension.selectils.swapAnchors",
+    "onCommand:extension.selectils.rotateRight",
+    "onCommand:extension.selectils.rotateLeft"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.selectils.select",
+        "title": "Select",
+        "category": "Selectils"
+      },
+      {
+        "command": "extension.selectils.split",
+        "title": "Split",
+        "category": "Selectils"
+      },
+      {
+        "command": "extension.selectils.merge",
+        "title": "Merge",
+        "category": "Selectils"
+      },
+      {
+        "command": "extension.selectils.filter",
+        "title": "Filter",
+        "category": "Selectils"
+      },
+      {
+        "command": "extension.selectils.replace",
+        "title": "Replace",
+        "category": "Selectils"
+      },
+      {
+        "command": "extension.selectils.swapAnchors",
+        "title": "Swap Anchors",
+        "category": "Selectils"
+      },
+      {
+        "command": "extension.selectils.rotateRight",
+        "title": "Rotate Right",
+        "category": "Selectils"
+      },
+      {
+        "command": "extension.selectils.rotateLeft",
+        "title": "Rotate Left",
+        "category": "Selectils"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.selectils.select",
+        "key": "alt+a",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.selectils.split",
+        "key": "alt+s",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.selectils.merge",
+        "key": "alt+d",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.selectils.filter",
+        "key": "alt+x",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.selectils.replace",
+        "key": "alt+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.selectils.swapAnchors",
+        "key": "alt+z",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.selectils.rotateRight",
+        "key": "alt+]",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.selectils.rotateLeft",
+        "key": "alt+[",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "tslint -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^8.10.61",
+    "@types/vscode": "^1.43.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.9.5"
+  }
+}
