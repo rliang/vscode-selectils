@@ -76,8 +76,8 @@ async function promptText(
         box.value.length
           ? resolve(box.value)
           : box.selectedItems.length
-          ? resolve(box.selectedItems[0].label)
-          : reject()
+            ? resolve(box.selectedItems[0].label)
+            : reject()
       );
       box.onDidHide(reject);
       box.show();
@@ -297,4 +297,4 @@ export function activate(context: ExtensionContext) {
     );
 }
 
-export function deactivate() {}
+export function deactivate() { }
